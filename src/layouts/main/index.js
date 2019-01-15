@@ -2,19 +2,17 @@
 
 import * as React from 'react';
 
-import './styles.less';
+import AppBar from './app-bar';
 
 type Props = {
     children: React.Node
-}
+};
 
 export default class MainLayout extends React.Component<Props> {
     render() {
         return (
-            <div styleName="main-layout">
-                <div>
-                    Welcome to Capibana
-                </div>
+            <div>
+                <AppBar />
                 {this.props.children}
             </div>
         );
