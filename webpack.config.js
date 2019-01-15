@@ -70,6 +70,14 @@ module.exports = (() => {
                     ]
                 },
                 {
+                    test: /mui.css$/,
+                    exclude: /node_modules/,
+                    use: [
+                        'css-to-mui-loader',
+                        'postcss-loader'
+                    ]
+                },
+                {
                     test: /\.less$/,
                     exclude: /node_modules/,
                     use: [

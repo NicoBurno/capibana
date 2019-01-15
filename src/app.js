@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Router from 'router';
 import Routes from 'router/routes';
@@ -12,11 +13,14 @@ type Props = {||};
 export default class App extends React.Component<Props> {
     render() {
         return (
-            <Router>
-                <MainLayout>
-                    <Routes />
-                </MainLayout>
-            </Router>
+            <React.Fragment>
+                <CssBaseline />
+                <Router>
+                    <MainLayout>
+                        <Routes />
+                    </MainLayout>
+                </Router>
+            </React.Fragment>
         );
     }
 }
